@@ -41,8 +41,17 @@ const john2 = new Object({name: 'John'});
 
 console.log(john2);
 
+// Arrays
+const arr1 = [1, 2, 3, 4];
+const arr2 = new Array(1, 2, 3, 4);
 
+console.log(arr2);
 
+// Regular Expressions
+const re1 = /\w+/;
+const re2 = new RegExp('\\w+');
+
+console.log(re2);
 
 
 
