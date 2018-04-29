@@ -46,22 +46,22 @@ Person.prototype.showFullName = function() {
 
 // Changed name
 Person.prototype.changedName = function(newName) {
-    this.firstName = newName;
+    return this.firstName = newName;
 }
 
 // Got older
-Person.prototype.gotOlder = function(addYears) {
-    return this.age + addYears;
+Person.prototype.gotOlder = function(x) {
+    return this.age + x;
 }
 
-personOne.gotOlder(5);
 
-console.log(personOne.changedName('Pav'));
+
+personOne.changedName('Pav');
 
 console.log(personOne);
 
-console.log(personTwo.showFullName());
+personOne.gotOlder(5);
 
-console.log(personOne.gotOlder(4));
+console.log(personOne.showFullName());
 
 console.log(personOne.age);
