@@ -46,22 +46,36 @@ Person.prototype.showFullName = function() {
 
 // Changed name
 Person.prototype.changedName = function(newName) {
-    return this.firstName = newName;
+    this.firstName = newName;
 }
 
 // Got older
-Person.prototype.gotOlder = function(x) {
-    return this.age + x;
+Person.prototype.gotOlder = function(newAge) {
+    this.age = this.age + newAge;
 }
 
+// Changed surname
+Person.prototype.changeSurname = function(newSurname) {
+    this.secondName = newSurname;
+}
+
+console.log(personOne);
 
 
 personOne.changedName('Pav');
 
+console.log(personOne.showFullName());
+
+personOne.gotOlder(4);
+
 console.log(personOne);
 
-personOne.gotOlder(5);
+personOne.changeSurname('Ka');
 
 console.log(personOne.showFullName());
 
 console.log(personOne.age);
+
+const newLocal = `${personOne.firstName}`;
+
+console.log(newLocal);
