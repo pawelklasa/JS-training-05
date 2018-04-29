@@ -64,4 +64,4 @@ console.log(personTwo.showFullName());
 
 console.log(personOne.gotOlder(4));
 
-console.log(personOne);
+console.log(personOne.age);
