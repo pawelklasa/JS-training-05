@@ -39,10 +39,29 @@ function Person(firstName, secondName, placeOfBirth, age) {
 const personOne = new Person('Pawel', 'Klasa', 'Bytow', 36);
 const personTwo = new Person('Bartek', 'Gardziel', 'Ustka', 7);
 
+// Get full name
+Person.prototype.showFullName = function() {
+    return `${this.firstName} ${this.secondName}`;
+}
+
 // Changed name
 Person.prototype.changedName = function(newName) {
     this.firstName = newName;
 }
 
+// Got older
+Person.prototype.gotOlder = function(addYears) {
+    return this.age + addYears;
+}
+
+personOne.gotOlder(5);
+
 console.log(personOne.changedName('Pav'));
+
+console.log(personOne);
+
+console.log(personTwo.showFullName());
+
+console.log(personOne.gotOlder(4));
+
 console.log(personOne);
