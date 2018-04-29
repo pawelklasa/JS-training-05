@@ -40,9 +40,9 @@ const personOne = new Person('Pawel', 'Klasa', 'Bytow', 36);
 const personTwo = new Person('Bartek', 'Gardziel', 'Ustka', 7);
 
 // Changed name
-Person.prototype.changedName = function() {
-    
+Person.prototype.changedName = function(newName) {
+    this.firstName = newName;
 }
 
+console.log(personOne.changedName('Pav'));
 console.log(personOne);
-
