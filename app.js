@@ -44,5 +44,5 @@ Person.prototype.changedName = function() {
     
 }
 
-console.log(personOne.);
+console.log(personOne);
 
